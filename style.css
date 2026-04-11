@@ -1,0 +1,253 @@
+
+:root{
+    --dark-back: #1a242b ;
+    --mid-white: #BFC9D1;
+    --light-white: #EAEFEF ;
+    --orange-dark: #FF5722 ;
+    --yellow-ff: #D4FF00 ;
+    --bliu-power: #00D2FF ;
+    --carts: #bfc9d1 ;
+    --orange-water: rgba(255, 87, 34,0.6) ;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--dark-back);
+    color: var(--light-white);
+    font-family: "Tajawal", sans-serif;
+}
+
+/* Header and navbar*/
+.head{
+    width: 100%;
+
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    padding: 10px;
+    /* border-bottom: 1px solid var(--mid-white); */
+}
+.navIcon{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.navIcon h1{
+    display: inline;
+    margin-left: 5px;
+    font-size: 45px;
+}
+.navIcon .material-symbols-outlined{
+    font-size: 50px;
+    margin-right: 5px;
+    font-weight: 100;
+}
+.navLink{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+.navLink a{
+    font-size: 25px;
+    text-decoration: none;
+    color: var(--light-white);
+    border: 1px solid var(--orange-dark);
+    background-color: rgba(255, 87, 34,0.1);
+    padding: 10px;
+    border-radius: 8px;
+    transition: .3s;
+}
+.navLink a:hover{
+    background-color: var(--orange-water);
+}
+/* under navbar */
+.underNavbar{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('image/gym110.webp') ;
+    background-size: cover; /* Ensures image covers screen */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    /* ========= */
+    /* height: 500px;    */
+}
+.underText{
+    width: 50%;
+    height: 60%;
+    padding: 30px;
+
+}
+.underText h1{
+    font-size: 50px;
+    font-weight: 500;
+    margin: 10px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-style: normal;
+    color: var(--light-white);
+}
+.underButton{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.underButton button{
+    /* ========== */
+    /* width: 300px; */
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 900;
+    font-style: normal;
+    background-color:var(--orange-water);
+    color: var(--light-white);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .3s;
+}
+.underButton .material-symbols-outlined{
+    font-size: 30px;
+    margin-right: 10px;
+    font-weight: 400;
+    height: 100%;
+}
+.underButton button:hover{
+    background-color: var(--orange-dark);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer and buttom page */
+.foot{
+    width: 100%;
+    /* padding: 10px; */
+    padding-top: 10px;
+    background-color: #0d1418 ;
+    font-family:Arial, Helvetica, sans-serif;
+    border-top: 3px solid var(--orange-dark);
+}
+
+.topFooter{
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.topParts{
+    text-align: center;
+    width: 30%;
+}
+.topParts h1{
+    font-size: 50px;
+    margin:0px;
+    font-weight: 200;
+    color: var(--orange-dark);
+}
+.topParts p{
+    font-size: 16px;
+    margin:5px ;
+}
+
+.mainFooter{
+    padding: 5px;
+}
+.mainFooternum{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    padding-bottom: 0;
+}
+.mainFooternum h3{
+    font-size: 20px;
+    font-weight: 100;
+
+}
+.mainFooterIcons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainFooterIcons #iconFoot{
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.mainFooterIcons #iconFoot a{
+    color: var(--light-white);
+    font-size: 30px;
+}
+
+
+
+.footFooter{
+    border-top: 1px solid var(--carts);
+    padding-left: 20px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+.footFooter p{
+    font-size: 20px;
+}
+.footFooter a{
+    /* text-decoration: none; */
+    color: var(--light-white);
+}
+
+
+
+
+/* the media ================== reponsive */
+
+@media (max-width: 768px) {
+    .navbar, .underNavbar, .topFooter {
+        flex-direction: column; /* ترتيب العناصر عمودياً */
+        text-align: center;
+        height: auto; /* السماح للارتفاع بالتمدد حسب المحتوى */
+    }
+    .navIcon, .navLink, .underText, .underButton {
+        width: 100%; /* تأخذ العرض كاملاً في الموبايل */
+    }
+    .mainFooternum{
+        flex-direction: column;
+    }
+}
