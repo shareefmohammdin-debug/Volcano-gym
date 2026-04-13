@@ -134,9 +134,174 @@ body{
 }
 
 
+/*========= main ==========*/
+
+/* Home page */
+.homepage{
+    padding: 10px;
+    padding-top: 0;
+
+    /* background-color: red; */
+}
 
 
+.firstTitel{
+    color: var(--light-white);
+    padding-left: 10px;
+    
+}
+.firstTitel h2{
+    font-size: 35px;
+}
 
+.optionCarts{
+    
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid var(--carts);
+
+}
+.carts{  
+    width: 20%;
+    height: 100%;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    transition: .3s;
+    /* border: 1px solid var(--orange-dark); */
+}
+.carts div p{
+    color: var(--light-white) ;
+    font-size: 20px;
+    font-weight: 500;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+#c1{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym13.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#c1:hover{
+    background-image:
+    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym13.jpg') 
+}
+#c2{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym6.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#c2:hover{
+    background-image:
+    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym6.jpg') 
+}
+#c3{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym3.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#c3:hover{
+    background-image:
+    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym3.jpg') 
+}
+#c4{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/ym8.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#c4:hover{
+    background-image:
+    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/ym8.jpg') 
+}
+/* #c5{
+    background-image:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym4.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#c5:hover{
+    background-image:
+    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
+    url('image/gym4.jpg') 
+} */
+
+
+/* the club tyle ==========*/
+
+.club{
+    /* background-color: black; */
+    padding: 5px;
+}
+
+
+.aboutClub{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+.clubImg{
+    width: 50%;
+    height: 100%;
+}
+.clubImg img{
+    width: 70%;
+    height: 70%;
+    border-radius: 5px;
+}
+.clubText{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    padding: 10px;
+}
+.clubText{
+    font-size: 20px;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+}
+
+
+/* trainer ============ */
+.trainer{
+    background-color: red;
+}
+.trainerImage{
+
+}
+.trainerImage img{
+
+}
+.trainerText{
+    
+}
+.trainerText p{
+    
+}
 
 
 
