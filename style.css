@@ -18,6 +18,11 @@ body{
     font-family: "Tajawal", sans-serif;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
 /* Header and navbar*/
 .head{
     width: 100%;
@@ -130,6 +135,7 @@ body{
     height: 100%;
 }
 .underButton button:hover{
+    transform: translateY(-3px);
     background-color: var(--orange-dark);
 }
 
@@ -154,98 +160,108 @@ body{
     font-size: 35px;
 }
 
-.optionCarts{
-    
-    padding: 10px;
+/* =========================================== */
+/* تحسين تصميم البطاقات (Option Cards) */
+/* =========================================== */
+
+.optionCarts {
+    padding: 30px 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 20px; /* إضافة مسافة بين البطاقات */
     margin-bottom: 40px;
-    padding-bottom: 30px;
-
-    border-bottom: 1px solid var(--carts);
-
+    border-bottom: 1px solid rgba(191, 201, 209, 0.2);
 }
-.carts{  
-    width: 20%;
-    height: 100%;
-    padding: 10px;
+
+.carts {
+    width: 22%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    border-radius: 5px;
-    transition: .3s;
-    /* border: 1px solid var(--orange-dark); */
+    border-radius: 15px; /* حواف أكثر نعومة */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة ارتدادية جذابة */
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* ظل يعطي عمقاً */
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
-.carts div p{
-    color: var(--light-white) ;
-    font-size: 20px;
-    font-weight: 500;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+
+/* تأثير عند مرور الماوس على أي بطاقة */
+.carts:hover {
+    transform: translateY(-10px); /* ترتفع للأعلى قليلاً */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
-#c1{
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym13.jpg') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+
+.carts div p {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: "Tajawal", sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* لجعل النص واضحاً جداً فوق الصور */
+    z-index: 2;
 }
-#c1:hover{
-    background-image:
-    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym13.jpg') 
+
+/* تخصيص ألوان وخلفيات فريدة لكل بطاقة باستخدام التدرجات */
+
+/* 1. عضوية جديدة - أزرق احترافي */
+#c1 {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.7), rgba(58, 123, 213, 0.8)), 
+                url('image/gym13.jpg') center/cover no-repeat;
 }
-#c2{
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym6.jpg') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#c1:hover {
+    background: linear-gradient(135deg, rgba(0, 210, 255, 0.9), rgba(58, 123, 213, 0.9)), 
+                url('image/gym13.jpg') center/cover no-repeat;
 }
-#c2:hover{
-    background-image:
-    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym6.jpg') 
+
+/* 2. تجديد العضوية - أخضر حيوي */
+#c2 {
+    background: linear-gradient(135deg, rgba(17, 153, 142, 0.7), rgba(56, 239, 125, 0.8)), 
+                url('image/gym6.jpg') center/cover no-repeat;
 }
-#c3{
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym3.jpg') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#c2:hover {
+    background: linear-gradient(135deg, rgba(17, 153, 142, 0.9), rgba(56, 239, 125, 0.9)), 
+                url('image/gym6.jpg') center/cover no-repeat;
 }
-#c3:hover{
-    background-image:
-    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym3.jpg') 
+
+/* 3. حذف العضوية - أحمر هادئ (تحذيري لكن جذاب) */
+#c3 {
+    background: linear-gradient(135deg, rgba(235, 51, 73, 0.7), rgba(244, 92, 67, 0.8)), 
+                url('image/gym3.jpg') center/cover no-repeat;
 }
-#c4{
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/ym8.jpg') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#c3:hover {
+    background: linear-gradient(135deg, rgba(235, 51, 73, 0.9), rgba(244, 92, 67, 0.9)), 
+                url('image/gym3.jpg') center/cover no-repeat;
 }
-#c4:hover{
-    background-image:
-    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/ym8.jpg') 
+
+/* 4. البحث عن عضو - بنفسجي ملكي */
+#c4 {
+    background: linear-gradient(135deg, rgba(106, 48, 147, 0.7), rgba(160, 68, 255, 0.8)), 
+                url('image/ym8.jpg') center/cover no-repeat;
 }
-/* #c5{
-    background-image:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym4.jpg') ;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+#c4:hover {
+    background: linear-gradient(135deg, rgba(106, 48, 147, 0.9), rgba(160, 68, 255, 0.9)), 
+                url('image/ym8.jpg') center/cover no-repeat;
 }
-#c5:hover{
-    background-image:
-    linear-gradient(rgba(218, 78, 7, 0.6), rgba(0, 0, 0, 0.8)),
-    url('image/gym4.jpg') 
-} */
+
+/* تحسين الاستجابة للموبايل لتناسب التصميم الجديد */
+@media (max-width: 768px) {
+    .optionCarts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    .carts {
+        width: 100%;
+        height: 140px;
+    }
+    .carts div p {
+        font-size: 18px;
+    }
+}
 
 
 /* the club tyle ==========*/
@@ -288,20 +304,120 @@ body{
 
 /* trainer ============ */
 .trainer{
-    background-color: red;
+    padding: 10px;
 }
 .trainerImage{
-
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
 }
 .trainerImage img{
-
+    width: 18%;
+    height: 200px;
+    border-radius: 3px;
 }
 .trainerText{
     
+    text-align: center;
+    color: var(--light-white);
+    padding: 10px;
+    padding-top: 0;
 }
 .trainerText p{
-    
+    font-size: 20px;
 }
+
+
+.tools{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.toolsImage1{
+    padding: 5px;
+    width: 20%;
+}
+.toolsImage2{
+    padding: 5px;
+    width: 20%;
+}
+.toolsImage{
+    border-radius: 5px;
+}
+.toolsText{
+    width: 60%;
+    height: 100%;
+    text-align: center;
+    color: var(--light-white);
+    padding: 10px;
+    padding-top: 0;
+    font-size: 20px;
+}
+/* main page is finish */
+
+
+
+/* ========================================================================= */
+/*      other page is dowm */
+/* ========================================================================= */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -401,18 +517,144 @@ body{
 
 
 
-/* the media ================== reponsive */
 
+/* Responsive Design (Media Queries)      */
+/* للشاشات التي يقل عرضها عن 768px (الهواتف والأجهزة اللوحية) */
 @media (max-width: 768px) {
-    .navbar, .underNavbar, .topFooter {
-        flex-direction: column; /* ترتيب العناصر عمودياً */
-        text-align: center;
-        height: auto; /* السماح للارتفاع بالتمدد حسب المحتوى */
-    }
-    .navIcon, .navLink, .underText, .underButton {
-        width: 100%; /* تأخذ العرض كاملاً في الموبايل */
-    }
-    .mainFooternum{
+    
+    /* 1. Header & Navbar */
+    .navbar {
         flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .navIcon {
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .navIcon h1 {
+        font-size: 30px; /* تصغير العنوان ليناسب الشاشة */
+    }
+
+    .navLink {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .navLink a {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+
+    /* 2. Hero Section (Under Navbar) */
+    .underNavbar {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 10px;
+        background-attachment: scroll; /* أفضل للأداء على الهواتف */
+    }
+
+    .underText, .underButton {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .underText h1 {
+        font-size: 32px; /* تصغير النصوص الكبيرة */
+        margin: 5px 0;
+    }
+
+    .underButton button {
+        width: 80%;
+        font-size: 24px;
+        margin: 20px auto;
+    }
+
+    /* 3. Option Cards (Grid System) */
+    /* .optionCarts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .carts {
+        width: 100%; 
+        height: 150px; 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } */
+
+    /* 4. About Club & Tools Sections */
+    .aboutClub, .tools {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .clubImg, .clubText, .toolsText, .toolsImage1, .toolsImage2 {
+        width: 100%;
+    }
+
+    .clubImg img, .toolsImage {
+        width: 100%;
+        max-width: 400px; /* منع الصور من أن تصبح ضخمة جداً */
+        margin: 15px 0;
+    }
+
+    /* 5. Trainers Section */
+    .trainerImage {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* صورتين في كل صف */
+        gap: 10px;
+    }
+
+    .trainerImage img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    /* 6. Footer */
+    .topFooter {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .topParts {
+        width: 100%;
+    }
+
+    .topParts h1 {
+        font-size: 35px;
+    }
+
+    .mainFooternum {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .mainFooterIcons #iconFoot {
+        width: 60%; /* توسيع منطقة الأيقونات في الموبايل */
+    }
+}
+
+/* للشاشات الصغيرة جداً (أقل من 480px) */
+@media (max-width: 480px) {
+    .optionCarts {
+        grid-template-columns: 1fr; /* بطاقة واحدة في كل صف */
+    }
+
+    .underText h1 {
+        font-size: 26px;
+    }
+    
+    .trainerImage {
+        grid-template-columns: 1fr;
     }
 }
