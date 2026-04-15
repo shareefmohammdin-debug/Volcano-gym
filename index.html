@@ -50,7 +50,7 @@
                     <h1>Be great</h1>
                 </div>
                 <div class="underButton">
-                    <button id="navButton" onclick="nones()">
+                    <button id="navButton" onclick="heddin()">
                         <span class="material-symbols-outlined">
                             join
                         </span>
@@ -68,19 +68,19 @@
     <!-- main | avery thing -->
     <main>
         <!-- Home Page -->
-        <div class="homepage">
+        <div class="homepage" id="home">
 
             <div class="firstTitel">
                 <h2>Subscription and registration options</h2>
             </div>
 
             <div class="optionCarts">
-                <div class="carts" id="c1">
+                <div class="carts" id="c1" onclick="heddin()">
                     <div>
                         <p>New membership</p>
                     </div>
                 </div>
-                <div class="carts" id="c2">
+                <div class="carts" id="c2" onclick="heddin()">
                     <div>
                         <p>membership renewal</p>
                     </div>
@@ -175,7 +175,7 @@
         <!--// Home Page //-->
 
         <!-- Membership carts -->
-         <div class="membershipCarts" style="display: none;">
+         <div class="membershipCarts" id="memshipCarts" style="display: block;">
             <div class="titel">
                 <h1>Choose Your Path to Power</h1>
                 <p>
@@ -186,17 +186,17 @@
                 </p>
             </div>
             <div class="theCarts">
-                <div class="bronze">
+                <div id="bronze" class="allCarts">
                     <div>
                         <span class="material-symbols-outlined">
                             star
                         </span>
                     </div>
                     <h1>Bronze Membership</h1>
-                    <p>50$</p>
-                    <p>Join Now</p>
+                    <p>50$ <span>Join Now</span></p>
+                    
                 </div>
-                <div class="gold">
+                <div id="gold" class="allCarts">
                     <div>
                         <span class="material-symbols-outlined">
                             star
@@ -215,10 +215,10 @@
                         </span>
                     </div>
                     <h1>Gold Membership</h1>
-                    <p>200$</p>
-                    <p>Join Now</p>
+                    <p>200$ <span>Join Now</span></p>
+                    
                 </div>
-                <div class="silver">
+                <div id="silver" class="allCarts">
                     <div>
                         <span class="material-symbols-outlined">
                             star
@@ -231,8 +231,8 @@
                         </span>
                     </div>
                     <h1>Silver Membership</h1>
-                    <p>100$</p>
-                    <p>Join Now</p>
+                    <p>100$ <span>Join Now</span></p>
+                    
                 </div>
             </div>
             
