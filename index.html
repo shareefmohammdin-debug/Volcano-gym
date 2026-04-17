@@ -50,7 +50,7 @@
                     <h1>Be great</h1>
                 </div>
                 <div class="underButton">
-                    <button id="navButton" onclick="heddin()">
+                    <button id="navButton" >
                         <span class="material-symbols-outlined">
                             join
                         </span>
@@ -175,7 +175,7 @@
         <!--// Home Page //-->
 
         <!-- Membership carts -->
-         <div class="membershipCarts" id="memshipCarts" style="display: block;">
+         <div class="membershipCarts" id="memshipCarts">
             <div class="titel">
                 <h1>Choose Your Path to Power</h1>
                 <p>
@@ -241,73 +241,91 @@
 
 
         <!-- New and Renew membership form -->
-         <div class="newAndRenew" style="display: none;">
+         <div class="newAndRenew" >
             <div class="newReTitle">
                 <h1>Subscription form</h1>
                 <p>Fill out the for to complete registration</p>
             </div>
             <div class="newReForm">
-                <div>
-                    <input id="full" type="text">
-                    <label for="full">Full name</label>
-                    <input id="age" type="number">
-                    <label for="age">Age</label>
-                </div>
-                <div>
-                    <input id="email" type="email">
-                    <label for="email">Email</label>
-                    <input id="phone" type="number">
-                    <label for="phone">Phone number</label>
-                </div>
-                <input id="agree" type="checkbox">
-                <label for="agree">I agree to the <a href="">terms</a></label>
-                <button>Submit</button>
+                <form class="main-form">
+                    <div class="form-group">
+                        <label for="full">Full Name</label>
+                        <input id="full" type="text" placeholder="Sharif Mohammed">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input id="age" type="number" placeholder="20">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" type="tel" placeholder="+250 794...">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input id="email" type="email" placeholder="example@gmail.com">
+                    </div>
+                    <div class="checkbox-group">
+                        <input id="agree" type="checkbox">
+                        <label for="agree">I agree to the <a href="#">terms</a></label>
+                    </div>
+                    <button type="submit" class="submit-btn">Submit Registration</button>
+                </form>
             </div>
          </div>
         <!--// New and Renew membership form //-->
 
 
         <!-- Remove membership -->
-         <div class="remove" style="display: none;">
+        <div class="remove" id="removeSection">
             <div class="reTitle">
-                <h1>Delete membership</h1>
-                <p>Warning if you delete your subcruption all your information will be deleted.</p>
+                <span class="material-symbols-outlined" style="color: #ff3349; font-size: 48px;">warning</span>
+                <h1>Delete Membership</h1>
+                <p>Warning: if you delete your subscription, all your information will be permanently removed.</p>
             </div>
-            <div class="reform">
-                <div>
-                    <input id="fullName" type="text">
-                    <label for="fullName">full name</label>
-                    <input id="idd" type="text">
-                    <label for="idd">ID</label>
-                    <input id="sure" type="checkbox">
-                    <label for="sure">I am sure about delete</label>
-                    <button>
-                        Delete membership
-                    </button>
-                </div>
+            <div class="newReForm"> 
+                <form class="main-form delete-form">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input id="fullName" type="text" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="idd">Membership ID</label>
+                        <input id="idd" type="text" placeholder="e.g. 02883">
+                    </div>
+                    <div class="checkbox-group warning-check">
+                        <input id="sure" type="checkbox">
+                        <label for="sure">I am sure I want to delete my membership</label>
+                    </div>
+                    <button type="button" class="submit-btn delete-btn">Confirm Deletion</button>
+                </form>
             </div>
-         </div>
+        </div>
         <!--// Remove membership //-->
 
         <!-- Search -->
-         <div class="search" style="display: none;">
-            <div class="searchBox">
-                <label for="search">
-                    <span class="material-symbols-outlined">
-                        search
-                    </span> 
-                </label>
-                <input id="search" type="search">
-            </div>
-            <div class="searchResult">
-                <div class="userInformation">
-                    <p>Name : sharifmohammdin ali</p>
-                    <p> Id  : 02883</p>
-                    <p>Status : active</p>
-                    <p>Expiry date : 22/5/2026</p>
+        <div class="search-section" id="searchPage">
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="material-symbols-outlined search-icon">search</span>
+                    <input type="text" id="searchInput" placeholder="Search for trainers, plans, or tools...">
+                    <button class="search-btn">Find</button>
+                </div>
+                
+                <div class="search-tags">
+                    <span>Popular:</span>
+                    <button class="tag">Yoga</button>
+                    <button class="tag">Boxing</button>
+                    <button class="tag">Gold Plan</button>
+                    <button class="tag">Cardio</button>
+                </div>
+
+                <div class="search-results" id="resultsArea">
+                    <p class="placeholder-text">Type something to start searching...</p>
                 </div>
             </div>
-         </div>
+        </div>
         <!--// Search //-->
 
 

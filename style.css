@@ -9,6 +9,7 @@
     --carts: #bfc9d1 ;
     --orange-water: rgba(255, 87, 34,0.6) ;
 }
+html { scroll-behavior: smooth; }
 body{
     margin: 0;
     padding: 0;
@@ -500,6 +501,275 @@ img{
         font-size: 16px;
     }
 }
+
+
+
+/* New and Renew membership form */
+
+.newAndRenew{
+    padding: 10px;
+}
+/* .newReTitle{
+
+} */
+.newReTitle h1{
+    font-size: 40px ;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+.newReTitle p{
+    margin-top: 5px;
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* تنسيق الحاوية الكبيرة */
+.newReForm {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+/* تصميم الفورم الزجاجي */
+.main-form {
+    background: rgba(255, 255, 255, 0.05); /* شفافية خفيفة جداً */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+/* تنسيق مجموعات الحقول */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left; /* ليكون النص متسقاً */
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* تصميم حقول الإدخال */
+label {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: var(--mid-white);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: white;
+    font-family: inherit;
+    transition: 0.3s;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--orange-dark);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 10px rgba(255, 87, 34, 0.3);
+}
+
+/* تنسيق زر الإرسال */
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--orange-dark);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.submit-btn:hover {
+    background: #ff7043;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
+
+
+
+/* MEMBERSHIP DELETE FORM */
+/* تنسيق خاص بعناوين الحذف */
+.reTitle {
+    text-align: center;
+    color: var(--light-white);
+    margin-bottom: 30px;
+}
+
+.reTitle h1 {
+    font-size: 35px;
+    margin: 10px 0;
+}
+
+.reTitle p {
+    color: #ff8a80; /* لون أحمر فاتح للتنبيه */
+    font-style: italic;
+}
+
+/* تعديلات خاصة بفورم الحذف الزجاجي */
+.delete-form {
+    border: 1px solid rgba(235, 51, 73, 0.2); /* حدود حمراء شفافة */
+}
+
+.delete-btn {
+    background: linear-gradient(135deg, #eb3349, #f45c43); /* تدرج أحمر تحذيري */
+}
+
+.delete-btn:hover {
+    background: #ff1744;
+    box-shadow: 0 5px 15px rgba(235, 51, 73, 0.4);
+}
+
+/* تنسيق خاص بـ Checkbox التحذير */
+.warning-check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #ff8a80;
+    font-size: 14px;
+}
+
+
+/* SEARCH MEMBERSHIP */
+/* حاوية البحث الكبيرة */
+
+.search-section {
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.search-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* صندوق البحث الزجاجي */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px; /* حواف دائرية بالكامل */
+    padding: 10px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.search-box:focus-within {
+    outline: none !important;
+    border-color: var(--orange-dark);
+    box-shadow: 0 0 20px rgba(255, 87, 34, 0.3);
+}
+
+.search-box input {
+    /* الخصائص الأساسية */
+    flex: 1;
+    background: none;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 18px;
+    
+    /* إزالة التحديد والتظليل عند الضغط (Focus) */
+    outline: none !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent; /* للهواتف المحمولة */
+}
+
+.search-icon {
+    color: var(--mid-white);
+    font-size: 28px;
+}
+
+.search-btn {
+    background: var(--orange-dark);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #ff7043;
+    transform: scale(1.05);
+}
+
+/* تنسيق الـ Tags */
+.search-tags {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--mid-white);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tag:hover {
+    background: var(--orange-dark);
+    color: white;
+}
+
+/* منطقة النتائج */
+.search-results {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    padding: 30px;
+    min-height: 200px;
+}
+
+.placeholder-text {
+    color: var(--mid-white);
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
 
 
 
