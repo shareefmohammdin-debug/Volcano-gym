@@ -763,11 +763,75 @@ input:focus {
     color: var(--mid-white);
     opacity: 0.6;
 }
+.search-back button{
+    width: 40%;
+    padding: 15px;
+    background: var(--orange-dark);
+    color: white;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+.search-back button:hover{
+    background: #ff7043;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+}
 
 
 
+/* result of search */
+/* تنسيق بطاقة النتيجة الواحدة */
+.result-item {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 15px 20px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    animation: fadeIn 0.4s ease-in-out; /* تأثير ظهور ناعم */
+}
 
+.result-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(10px); /* حركة بسيطة لليمين عند التمرير */
+    border-color: var(--orange-dark);
+}
 
+.result-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--light-white);
+}
+
+.result-info p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    color: var(--mid-white);
+}
+
+.result-id {
+    background: var(--orange-dark);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* أنيميشن بسيط لظهور النتائج */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
 
 

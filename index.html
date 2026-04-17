@@ -50,7 +50,7 @@
                     <h1>Be great</h1>
                 </div>
                 <div class="underButton">
-                    <button id="navButton" >
+                    <button id="navButton" onclick="goCrts()">
                         <span class="material-symbols-outlined">
                             join
                         </span>
@@ -75,22 +75,22 @@
             </div>
 
             <div class="optionCarts">
-                <div class="carts" id="c1" onclick="heddin()">
+                <div class="carts" id="c1" onclick="goCrts()">
                     <div>
                         <p>New membership</p>
                     </div>
                 </div>
-                <div class="carts" id="c2" onclick="heddin()">
+                <div class="carts" id="c2" onclick="goCrts()">
                     <div>
                         <p>membership renewal</p>
                     </div>
                 </div>
-                <div class="carts" id="c3">
+                <div class="carts" id="c3" onclick="goDelForm()">
                     <div>
                         <p>Delete membership</p>
                     </div>
                 </div>
-                <div class="carts" id="c4">
+                <div class="carts" id="c4" onclick="goSearch()">
                     <div>
                         <p>Searching member</p>
                     </div>
@@ -175,7 +175,7 @@
         <!--// Home Page //-->
 
         <!-- Membership carts -->
-         <div class="membershipCarts" id="memshipCarts">
+         <div class="membershipCarts" id="memshipCarts" style="display: none;">
             <div class="titel">
                 <h1>Choose Your Path to Power</h1>
                 <p>
@@ -186,7 +186,7 @@
                 </p>
             </div>
             <div class="theCarts">
-                <div id="bronze" class="allCarts">
+                <div id="bronze" class="allCarts" onclick="goForm()">
                     <div>
                         <span class="material-symbols-outlined">
                             star
@@ -196,7 +196,7 @@
                     <p>50$ <span>Join Now</span></p>
                     
                 </div>
-                <div id="gold" class="allCarts">
+                <div id="gold" class="allCarts" onclick="goForm()">
                     <div>
                         <span class="material-symbols-outlined">
                             star
@@ -218,7 +218,7 @@
                     <p>200$ <span>Join Now</span></p>
                     
                 </div>
-                <div id="silver" class="allCarts">
+                <div id="silver" class="allCarts" onclick="goForm()">
                     <div>
                         <span class="material-symbols-outlined">
                             star
@@ -241,7 +241,7 @@
 
 
         <!-- New and Renew membership form -->
-         <div class="newAndRenew" >
+         <div class="newAndRenew" id="addForm" style="display: none;">
             <div class="newReTitle">
                 <h1>Subscription form</h1>
                 <p>Fill out the for to complete registration</p>
@@ -270,7 +270,7 @@
                         <input id="agree" type="checkbox">
                         <label for="agree">I agree to the <a href="#">terms</a></label>
                     </div>
-                    <button type="submit" class="submit-btn">Submit Registration</button>
+                    <button type="submit" class="submit-btn" id="frmSubmit" onclick="goHome()">Submit Registration</button>
                 </form>
             </div>
          </div>
@@ -278,7 +278,7 @@
 
 
         <!-- Remove membership -->
-        <div class="remove" id="removeSection">
+        <div class="remove" id="removeSection" style="display: none;">
             <div class="reTitle">
                 <span class="material-symbols-outlined" style="color: #ff3349; font-size: 48px;">warning</span>
                 <h1>Delete Membership</h1>
@@ -298,14 +298,14 @@
                         <input id="sure" type="checkbox">
                         <label for="sure">I am sure I want to delete my membership</label>
                     </div>
-                    <button type="button" class="submit-btn delete-btn">Confirm Deletion</button>
+                    <button type="button" class="submit-btn delete-btn" onclick="goHome()">Confirm Deletion</button>
                 </form>
             </div>
         </div>
         <!--// Remove membership //-->
 
         <!-- Search -->
-        <div class="search-section" id="searchPage">
+        <div class="search-section" id="searchPage" style="display:none;">
             <div class="search-container">
                 <div class="search-box">
                     <span class="material-symbols-outlined search-icon">search</span>
@@ -323,6 +323,9 @@
 
                 <div class="search-results" id="resultsArea">
                     <p class="placeholder-text">Type something to start searching...</p>
+                </div>
+                <div class="search-back" onclick=" goHome()">
+                    <button>Back</button>
                 </div>
             </div>
         </div>
